@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Wedding of Adam &amp; Valerie — Vintage by Nivienne &amp; Co.</title>
+  <meta name="description" content="You are warmly invited to the wedding of Adam &amp; Valerie. A Vintage invitation by Nivienne &amp; Co.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400&family=Ephesis&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       LOADING SCREEN
+  ══════════════════════════════════════════ -->
+  <div class="loader-screen" id="loader-screen">
+    <div class="loader-center">
+      <p class="loader-eyebrow">
+        <span id="tw-line1"></span><span id="tw-line2"></span>
+      </p>
+      <div class="loader-img-frame" id="loader-img-frame">
+        <img src="images/1.png" alt="" class="loader-img active" id="loader-img-a">
+        <img src="images/2.jpeg" alt="" class="loader-img" id="loader-img-b">
+      </div>
+      <p class="loader-names"><span id="tw-names"></span></p>
+    </div>
+    <div class="loader-foot">
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loader-bar-fill"></div>
+      </div>
+      <p class="loader-pct-line">LOADING...<span id="loader-pct">0</span>%</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       COVER SCREEN
+  ══════════════════════════════════════════ -->
+  <div class="cover" id="cover">
+
+    <!-- Blurred full-screen background -->
+    <div class="cover-left">
+      <img src="images/1.png" alt="" class="cover-photo" loading="eager">
+      <div class="cover-left-overlay"></div>
+    </div>
+
+    <!-- iPhone frame -->
+    <div class="cover-right">
+
+      <!-- Photo wallpaper inside the frame -->
+      <div class="cover-bg">
+        <img src="images/1.png" alt="Adam and Valerie" class="cover-bg-img" loading="eager">
+        <div class="cover-bg-overlay"></div>
+      </div>
+
+      <!-- Top: invitation header -->
+      <div class="cover-top">
+        <p class="cover-eyebrow">WE INVITE YOU TO CELEBRATE</p>
+        <h1 class="cover-title">ADAM &amp; VALERIE</h1>
+        <p class="cover-date">SATURDAY, 14 JUNE 2025</p>
+      </div>
+
+      <!-- Spacer — couple shows through -->
+      <div class="cover-spacer"></div>
+
+      <!-- Bottom: guest greeting + CTA -->
+      <div class="cover-bottom">
+        <p class="cover-for">Dear</p>
+        <p class="cover-guest" id="guest-name">Our Beloved Guest</p>
+        <p class="cover-apology">We apologize if there is any misspelling of name or title</p>
+        <button class="cover-btn" id="open-btn">LET'S OPEN</button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       MAIN INVITATION — split layout
+  ══════════════════════════════════════════ -->
+  <div class="invitation hidden" id="invitation">
+
+    <!-- FIXED LEFT PANEL (prewedding video bg) -->
+    <aside class="left-panel" id="left-panel">
+      <div class="lp-video-wrap">
+        <video
+          class="lp-video"
+          id="lp-video"
+          src="images/prewedding video adam valerie.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+        ></video>
+      </div>
+      <div class="lp-overlay"></div>
+      <!-- Section counter -->
+      <div class="section-counter" id="section-counter">01<span class="counter-total">/12</span></div>
+      <!-- Fixed couple names at bottom -->
+      <div class="lp-bottom">
+        <p class="lp-names">Adam <em>&amp;</em> Valerie</p>
+        <p class="lp-wedding">June 14, 2025</p>
+      </div>
+    </aside>
+
+    <!-- SCROLLABLE RIGHT PANEL (iPhone frame) -->
+    <div class="phone-wrap" id="phone-wrap">
+
+      <!-- Prewedding video wallpaper inside the phone -->
+      <video
+        class="phone-video"
+        id="phone-video"
+        src="images/prewedding video adam valerie.mp4"
+        muted
+        loop
+        playsinline
+        preload="auto"
+      ></video>
+      <div class="phone-video-overlay"></div>
+
+      <main class="right-panel" id="right-panel">
+
+      <!-- Music button -->
+      <button class="music-btn" id="music-btn" aria-label="Toggle background music">
+        <svg id="icon-music-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <svg id="icon-music-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none"><line x1="1" y1="1" x2="23" y2="23"/><path d="M9 9v9m3-7l9-2v8M6 18a3 3 0 100-6 3 3 0 000 6z"/></svg>
+      </button>
+      <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" type="audio/mpeg">
+      </audio>
+
+      <!-- ── S1: Opening ── -->
+      <section class="rp-section s-dark" data-section="1" data-img="0" id="s1">
+        <div class="rp-inner center">
+          <p class="rp-eyebrow reveal">THE WEDDING OF</p>
+          <h2 class="rp-title-giant reveal">Adam <em>&amp;</em> Valerie</h2>
+          <p class="rp-date reveal">SATURDAY, 14 JUNE 2025</p>
+          <div class="scroll-hint reveal">
+            <div class="scroll-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <span>scroll</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── S2: Scripture / Quote ── -->
+      <section class="rp-section s-light" data-section="2" data-img="1" id="s2">
+        <div class="rp-inner center">
+          <p class="rp-eyebrow reveal" style="color:var(--sage-dark)">mark 10 : 6–9</p>
+          <blockquote class="rp-scripture reveal">
+            "What therefore God has joined together,<br>
+            let no man separate."
+          </blockquote>
+          <p class="rp-scripture-attr reveal">— Adam &amp; Valerie</p>
+        </div>
+      </section>
+
+      <!-- ── S3: The Groom ── -->
+      <section class="rp-section s-photo" data-section="3" data-img="2" id="s3">
+        <div class="rp-photo-bg">
+          <img src="images/groom.jpeg" alt="The Groom Adam" class="rp-photo-img">
+        </div>
+        <div class="rp-photo-overlay"></div>
+        <div class="rp-inner bottom">
+          <p class="rp-role reveal">the groom</p>
+          <h2 class="rp-person-name reveal">Adam Harrison</h2>
+          <p class="rp-person-sub reveal">The Son of</p>
+          <p class="rp-person-parents reveal">Mr. James Harrison &amp; Mrs. Eleanor Harrison</p>
+          <p class="rp-person-bio reveal">A man of quiet devotion, gentle strength, and boundless love — Adam has waited his whole life for this morning with Valerie.</p>
+          <a class="rp-ig-btn reveal" href="https://www.instagram.com/adam_harrison" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+            </svg>
+            @adam_harrison
+          </a>
+        </div>
+      </section>
+
+      <!-- ── S4: The Bride ── -->
+      <section class="rp-section s-photo" data-section="4" data-img="3" id="s4">
+        <div class="rp-photo-bg">
+          <img src="images/bride.jpeg" alt="The Bride Valerie" class="rp-photo-img">
+        </div>
+        <div class="rp-photo-overlay"></div>
+        <div class="rp-inner bottom">
+          <p class="rp-role reveal">the bride</p>
+          <h2 class="rp-person-name reveal">Valerie Stone</h2>
+          <p class="rp-person-sub reveal">The Daughter of</p>
+          <p class="rp-person-parents reveal">Mr. Richard Stone &amp; Mrs. Susan Stone</p>
+          <p class="rp-person-bio reveal">Radiant, tender, and full of grace — Valerie walks into this new chapter with a heart wide open and a smile that makes every room feel like home.</p>
+          <a class="rp-ig-btn reveal" href="https://www.instagram.com/valerie_stone" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+            </svg>
+            @valerie_stone
+          </a>
+        </div>
+      </section>
+
+      <!-- ── S8: Love Story (Our Story) ── -->
+      <section class="rp-section s-light" data-section="8" data-img="7" id="s8">
+        <div class="rp-inner pad">
+          <p class="rp-eyebrow reveal" style="color:var(--sage-dark)">our story</p>
+          <div class="timeline">
+            <div class="tl-item reveal">
+              <div class="tl-year">2019</div>
+              <div class="tl-body">
+                <h3>First Meeting</h3>
+                <p>We met at a farmer's market on a warm September morning. Adam handed Valerie the last bunch of sunflowers. An apology became a coffee. A coffee became everything.</p>
+              </div>
+            </div>
+            <div class="tl-item reveal">
+              <div class="tl-year">2021</div>
+              <div class="tl-body">
+                <h3>The Promise</h3>
+                <p>On a quiet hillside in Vermont, as the last light of summer turned the grass to gold, Adam knelt and asked. Valerie said yes before he could finish the sentence.</p>
+              </div>
+            </div>
+            <div class="tl-item reveal">
+              <div class="tl-year">2025</div>
+              <div class="tl-body">
+                <h3>Forever Begins</h3>
+                <p>In the soft warmth of a June morning, surrounded by those they love most, Adam and Valerie begin the most sacred chapter — together.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── S5: Events (Holy Matrimony + Reception) ── -->
+      <section class="rp-section s-photo" data-section="5" data-img="4" id="s5">
+        <div class="rp-photo-bg">
+          <img src="images/4.jpeg" alt="Wedding ceremony" class="rp-photo-img" style="object-position:center center;">
+        </div>
+        <div class="rp-photo-overlay ev-overlay"></div>
+        <div class="rp-inner ev-inner">
+
+          <!-- Date header -->
+          <h2 class="ev-date reveal" style="transition-delay:0ms">SATURDAY,<br>14 JUNE 2025</h2>
+          <div class="ev-rule reveal" style="transition-delay:500ms"></div>
+
+          <!-- Holy Matrimony -->
+          <div class="ev-block reveal" style="transition-delay:900ms">
+            <p class="ev-title">HOLY MATRIMONY</p>
+            <p class="ev-time">AT 09.00 – 10.00 AM</p>
+            <p class="ev-venue">GRACE CATHEDRAL</p>
+            <p class="ev-addr">1100 California St,<br>San Francisco, CA 94108, United States</p>
+            <a href="https://maps.google.com/?q=Grace+Cathedral+1100+California+St+San+Francisco" target="_blank" class="ev-maps-btn">GOOGLE MAPS</a>
+          </div>
+          <div class="ev-rule reveal" style="transition-delay:1350ms"></div>
+
+          <!-- Wedding Reception -->
+          <div class="ev-block reveal" style="transition-delay:1700ms">
+            <p class="ev-title">WEDDING RECEPTION</p>
+            <p class="ev-time">AT 12.00 – 14.00 PM</p>
+            <p class="ev-venue">THE FAIRMONT SAN FRANCISCO</p>
+            <p class="ev-addr">950 Mason St,<br>San Francisco, CA 94108, United States</p>
+            <a href="https://maps.google.com/?q=Fairmont+Hotel+950+Mason+St+San+Francisco" target="_blank" class="ev-maps-btn">GOOGLE MAPS</a>
+          </div>
+          <div class="ev-rule reveal" style="transition-delay:2100ms"></div>
+
+        </div>
+      </section>
+
+      <!-- ── S7: Countdown ── -->
+      <section class="rp-section s-dark" data-section="7" data-img="6" id="s7">
+        <div class="rp-inner center">
+          <p class="rp-eyebrow reveal">counting the moments</p>
+          <p class="rp-countdown-to reveal">until we say <em>I do</em></p>
+          <div class="countdown-wrap reveal" id="countdown">
+            <div class="cd-card"><span class="cd-num" id="cd-d">00</span><span class="cd-lbl">Hari</span></div>
+            <div class="cd-card"><span class="cd-num" id="cd-h">00</span><span class="cd-lbl">Jam</span></div>
+            <div class="cd-card"><span class="cd-num" id="cd-m">00</span><span class="cd-lbl">Menit</span></div>
+            <div class="cd-card"><span class="cd-num" id="cd-s">00</span><span class="cd-lbl">Detik</span></div>
+          </div>
+          <a class="save-btn reveal"
+            href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20250614T080000Z%0ADTEND:20250614T150000Z%0ASUMMARY:Wedding%20of%20Adam%20%26%20Valerie%0ALOCATION:Savannah%2C%20GA%0AEND:VEVENT%0AEND:VCALENDAR"
+            download="adam-valerie.ics">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Save the Date
+          </a>
+        </div>
+      </section>
+
+      <!-- ── S9: Gallery ── -->
+      <section class="rp-section s-dark" data-section="9" data-img="8" id="s9">
+        <div class="gl-wrap">
+          <!-- Counter -->
+          <div class="gl-counter" id="gl-counter">1 / 13</div>
+
+          <!-- Card -->
+          <div class="gl-card" id="gl-card">
+            <img src="images/1.png" alt="Moment" class="gl-img" id="gl-img">
+
+            <!-- Preview hint -->
+            <div class="gl-hint">Click image for preview</div>
+
+            <!-- Arrows -->
+            <button class="gl-arrow gl-prev" id="gl-prev" aria-label="Previous">&#8249;</button>
+            <button class="gl-arrow gl-next" id="gl-next" aria-label="Next">&#8250;</button>
+
+            <!-- Bottom overlay -->
+            <div class="gl-bottom">
+              <p class="gl-heading">OUR MOMENTS</p>
+              <p class="gl-script">Adam &amp; Valerie</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="gl-lightbox" id="gl-lightbox">
+          <button class="gl-lb-close" id="gl-lb-close">&#10005;</button>
+          <button class="gl-lb-arrow gl-lb-prev" id="gl-lb-prev">&#8249;</button>
+          <img class="gl-lb-img" id="gl-lb-img" src="" alt="">
+          <button class="gl-lb-arrow gl-lb-next" id="gl-lb-next">&#8250;</button>
+        </div>
+      </section>
+
+
+      <!-- ── S10: RSVP ── -->
+      <section class="rp-section s-dark" data-section="10" data-img="9" id="s10">
+        <div class="rp-inner rsvp-wizard-wrap reveal">
+
+          <!-- Title -->
+          <h2 class="rsvp-wiz-title">Kindly Confirm Your<br>Presence And Share<br>Your Blessings</h2>
+          <p class="rsvp-wiz-sub">We kindly request your prompt response to confirm your attendance at our upcoming event. Alongside your RSVP, please take a moment to extend your warm regards and best wishes.</p>
+
+          <!-- Step indicators -->
+          <div class="rsvp-steps" id="rsvp-steps">
+            <div class="rsvp-step active" data-step="1"><span>1</span></div>
+            <div class="rsvp-step-line"></div>
+            <div class="rsvp-step" data-step="2"><span>2</span></div>
+            <div class="rsvp-step-line"></div>
+            <div class="rsvp-step" data-step="3"><span>3</span></div>
+            <div class="rsvp-step-line"></div>
+            <div class="rsvp-step" data-step="4"><span>4</span></div>
+          </div>
+
+          <!-- Step panels -->
+          <div class="rsvp-panels" id="rsvp-panels">
+
+            <!-- Step 1: Name -->
+            <div class="rsvp-panel active" id="rsvp-p1">
+              <label class="rsvp-lbl">NAME</label>
+              <input class="rsvp-input" type="text" id="rsvp-name" placeholder="Your Name" autocomplete="off">
+              <div class="rsvp-nav">
+                <button class="rsvp-wiz-btn dark full" id="rsvp-next1">NEXT</button>
+              </div>
+            </div>
+
+            <!-- Step 2: Attendance -->
+            <div class="rsvp-panel" id="rsvp-p2">
+              <label class="rsvp-lbl">ATTENDANCE</label>
+              <div class="rsvp-attend-row">
+                <button class="rsvp-attend-btn selected" id="attend-yes">EXCITED TO ATTEND</button>
+                <button class="rsvp-attend-btn" id="attend-no">UNABLE ATTEND</button>
+              </div>
+              <div class="rsvp-nav">
+                <button class="rsvp-wiz-btn gray" id="rsvp-prev2">PREVIOUS</button>
+                <button class="rsvp-wiz-btn dark" id="rsvp-next2">NEXT</button>
+              </div>
+            </div>
+
+            <!-- Step 3: Guest count -->
+            <div class="rsvp-panel" id="rsvp-p3">
+              <label class="rsvp-lbl">NO OF GUEST (MAX 2)</label>
+              <input class="rsvp-input" type="number" id="rsvp-guests" min="1" max="2" value="1">
+              <div class="rsvp-nav">
+                <button class="rsvp-wiz-btn gray" id="rsvp-prev3">PREVIOUS</button>
+                <button class="rsvp-wiz-btn dark" id="rsvp-next3">NEXT</button>
+              </div>
+            </div>
+
+            <!-- Step 4: Wishes -->
+            <div class="rsvp-panel" id="rsvp-p4">
+              <label class="rsvp-lbl">WISHES</label>
+              <textarea class="rsvp-textarea" id="rsvp-wishes" rows="5" placeholder="Leave your warm wishes…"></textarea>
+              <div class="rsvp-nav">
+                <button class="rsvp-wiz-btn gray" id="rsvp-prev4">PREVIOUS</button>
+                <button class="rsvp-wiz-btn dark" id="rsvp-send">SEND</button>
+              </div>
+            </div>
+
+            <!-- Success -->
+            <div class="rsvp-panel" id="rsvp-done">
+              <p class="rsvp-done-msg">✦</p>
+              <p class="rsvp-done-sub">thank you — your response has been received.</p>
+              <p class="rsvp-done-sub">we look forward to celebrating with you.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── S11: Gift ── -->
+      <section class="rp-section s-dark" data-section="11" data-img="10" id="s11">
+        <div class="rp-inner center">
+          <p class="rp-eyebrow reveal">love gift</p>
+          <p class="rp-gift-intro reveal">Your presence is our greatest gift. Should you wish to honour us further, a heartfelt contribution is warmly received.</p>
+          <div class="gift-grid reveal">
+            <div class="gift-card">
+              <p class="gift-bank">Bank of America</p>
+              <p class="gift-holder">Adam Harrison</p>
+              <p class="gift-acct">•••• •••• •••• 4821</p>
+              <button class="gift-copy-btn" onclick="copyAcct('4821082193874821','Adam Harrison')">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Number
+              </button>
+            </div>
+            <div class="gift-card">
+              <p class="gift-bank">Chase</p>
+              <p class="gift-holder">Valerie Stone</p>
+              <p class="gift-acct">•••• •••• •••• 3307</p>
+              <button class="gift-copy-btn" onclick="copyAcct('3307551829463307','Valerie Stone')">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Number
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── S12: Atteri (Dress Code) ── -->
+      <section class="rp-section s-dark" data-section="12" data-img="12" id="s12">
+        <div class="rp-inner atteri-inner center">
+          <div class="atteri-card reveal">
+            <img src="images/13.jpeg" alt="Atteri dress code" class="atteri-card-img">
+            <div class="atteri-card-overlay"></div>
+            <div class="atteri-card-content">
+              <h2 class="atteri-title">ATTERI</h2>
+              <p class="atteri-sub">WE KINDLY ENCOURAGE OUR GUESTS TO<br>WEAR THESE COLORS FOR OUR SPECIAL DAY</p>
+              <div class="atteri-swatches">
+                <span class="atteri-dot" style="background:#F5F0EB;"></span>
+                <span class="atteri-dot" style="background:#3B2E2A;"></span>
+                <span class="atteri-dot" style="background:#9E9189;"></span>
+                <span class="atteri-dot" style="background:#D9A99A;"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── S13: Live Streaming ── -->
+      <section class="rp-section s-dark" data-section="13" data-img="13" id="s13">
+        <div class="rp-inner ls-inner" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+          <div class="ls-card reveal">
+            <img src="images/12.jpeg" alt="Live streaming" class="ls-card-img">
+          </div>
+          <div class="ls-body reveal" style="display:flex; flex-direction:column; gap:0.8rem; align-items:center; text-align:center;">
+            <h2 class="ls-title" style="font-weight:400; font-style:normal;">Join Our Exclusive<br>Live Streaming<br>Event</h2>
+            <p class="ls-date">SATURDAY, 14 JUNE 2025</p>
+            <a href="#" class="ls-btn" target="_blank">JOIN NOW</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── S14: Closing ── -->
+      <section class="rp-section s-closing" data-section="14" data-img="0" id="s14">
+
+        <!-- Video background -->
+        <video class="closing-video" autoplay muted loop playsinline>
+          <source src="images/prewedding video adam valerie.mp4" type="video/mp4">
+        </video>
+        <div class="closing-video-overlay"></div>
+
+        <!-- Content -->
+        <div class="closing-content">
+          <h2 class="closing-thankyou reveal">Thank You For Your<br>Attendance And<br>Support</h2>
+          <p class="closing-body reveal">It is a pleasure and honor for us, if you are willing to attend and give us your blessing.</p>
+          <p class="closing-couple reveal">Adam &amp; Valerie</p>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="closing-bar reveal">
+          <p class="closing-bar-by">CREATED BY NIVIENNE &amp; CO.</p>
+          <div class="closing-bar-links">
+            <span class="closing-bar-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M5.077 0C2.3 0 .003 2.297.003 5.077c0 .896.235 1.735.64 2.465L.003 10.77l3.333-.876A5.058 5.058 0 005.077 10.15c2.778 0 5.075-2.297 5.075-5.073C10.152 2.297 7.855 0 5.077 0zm0 9.307c-.763 0-1.483-.21-2.1-.573l-.15-.09-1.98.52.53-1.934-.098-.157a4.207 4.207 0 01-.646-2.228C.633 2.744 2.696.68 5.077.68c2.38 0 4.443 2.064 4.443 4.444 0 2.38-2.063 4.183-4.443 4.183z" transform="translate(0 1)"/></svg>
+              +62-877-9000-4963
+            </span>
+            <span class="closing-bar-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+              NIVIENNE_STUDIO
+            </span>
+            <span class="closing-bar-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+              NIVIENNE-STUDIO.VERCEL.APP
+            </span>
+          </div>
+          <p class="closing-copyright">&copy; All rights reserved by Nivienne &amp; Co.</p>
+        </div>
+      </section>
+
+    </main><!-- /.right-panel -->
+    </div><!-- /.phone-wrap -->
+  </div><!-- /.invitation -->
+
+  <script src="script.js"></script>
+</body>
+</html>
