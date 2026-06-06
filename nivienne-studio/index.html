@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nivienne & Co. — Luxury Digital Wedding Invitations</title>
+  <meta name="description" content="Nivienne & Co. crafts editorial minimalist digital wedding invitations for the modern American couple. Sacred, beautiful, and unforgettable — your love story, beautifully told.">
+  <meta property="og:title" content="Nivienne & Co. — Luxury Digital Wedding Invitations">
+  <meta property="og:description" content="Editorial minimalist wedding invitations for the modern American couple.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav-logo" id="nav-logo-link">
+      <span class="logo-nivienne">Nivienne</span>
+      <span class="logo-amp">&amp;</span>
+      <span class="logo-co">Co.</span>
+    </a>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#templates" id="nav-templates">Collections</a></li>
+      <li><a href="#features" id="nav-features">Features</a></li>
+      <li><a href="#how-it-works" id="nav-process">Process</a></li>
+      <li><a href="#about" id="nav-about">Our Story</a></li>
+      <li>
+        <a href="#start" class="nav-cta" id="nav-cta-btn">
+          <span>Begin Your Story</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <a href="#templates" class="mobile-link" id="m-templates">Collections</a>
+      <a href="#features" class="mobile-link" id="m-features">Features</a>
+      <a href="#how-it-works" class="mobile-link" id="m-process">Process</a>
+      <a href="#about" class="mobile-link" id="m-about">Our Story</a>
+      <a href="#start" class="mobile-link mobile-cta" id="m-cta">Begin Your Story</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" id="hero-eyebrow">Luxury Digital Wedding Invitations</p>
+
+      <h1 class="hero-title" id="hero-title">
+        Every Love Story<br>Deserves<br>a <em>Beautiful</em> Beginning
+      </h1>
+
+      <div class="hero-divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-icon">✦</span>
+        <span class="divider-line"></span>
+      </div>
+
+      <p class="hero-sub" id="hero-sub">
+        Sacred, editorial, and unforgettable — digital invitations crafted for the modern couple.
+      </p>
+
+      <div class="hero-actions" id="hero-actions">
+        <a href="#templates" class="btn-primary" id="hero-cta-primary">
+          <span>Explore Collections</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#how-it-works" class="btn-ghost" id="hero-cta-secondary">How It Works</a>
+      </div>
+
+      <div class="hero-stats" id="hero-stats">
+        <div class="stat">
+          <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Couples Served</span>
+        </div>
+        <div class="stat-sep" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="48">0</span><span class="stat-suffix">h</span>
+          <span class="stat-label">Delivery Time</span>
+        </div>
+        <div class="stat-sep" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Satisfaction</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" id="hero-scroll" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-dot"></div>
+      </div>
+      <span>Discover</span>
+    </div>
+  </section>
+
+
+
+  <!-- ═══════════════════════════════════════
+       PHILOSOPHY / ABOUT
+  ═══════════════════════════════════════ -->
+  <section class="section philosophy" id="about" aria-label="Our philosophy">
+    <div class="container">
+      <div class="philosophy-grid">
+        <!-- Left: Manifesto -->
+        <div class="philosophy-left reveal-left">
+          <p class="eyebrow">Our Manifesto</p>
+          <blockquote class="philosophy-quote">
+            "We believe every wedding invitation is the first page of a sacred story — it deserves to be told with grace, beauty, and absolute devotion."
+          </blockquote>
+          <p class="philosophy-attribution">— Nivienne &amp; Co., est. 2024</p>
+          <div class="philosophy-accent-line" aria-hidden="true"></div>
+        </div>
+
+        <!-- Right: Pillars -->
+        <div class="philosophy-right reveal-right">
+          <div class="pillar" id="pillar-hope">
+            <div class="pillar-number" aria-hidden="true">01</div>
+            <div class="pillar-body">
+              <h3>Hope &amp; New Beginnings</h3>
+              <p>Each invitation carries the weight of a lifetime's promise — a luminous doorway into your most beautiful chapter.</p>
+            </div>
+          </div>
+          <div class="pillar" id="pillar-sacred">
+            <div class="pillar-number" aria-hidden="true">02</div>
+            <div class="pillar-body">
+              <h3>Sacred &amp; Devoted</h3>
+              <p>We treat every design as an act of devotion to your story, crafted with the reverence and care it deserves.</p>
+            </div>
+          </div>
+          <div class="pillar" id="pillar-trust">
+            <div class="pillar-number" aria-hidden="true">03</div>
+            <div class="pillar-body">
+              <h3>Trust &amp; Quiet Elegance</h3>
+              <p>Each design speaks in a language of understated luxury, assuring you that your most sacred moments are held in exquisite hands.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       TEMPLATES / COLLECTIONS
+  ═══════════════════════════════════════ -->
+  <section class="section templates" id="templates" aria-label="Template collections">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">Our Collections</p>
+        <h2 class="section-title">Templates Born<br>from <em>Feeling</em></h2>
+        <p class="section-body">Each design is named for a feeling, not merely an aesthetic — because your invitation should be felt before it is ever read.</p>
+      </div>
+
+      <div class="templates-grid">
+        <!-- Card 1 -->
+        <article class="template-card reveal reveal-d1" id="card-vintage" aria-label="Vintage template">
+          <a href="template-vintage/index.html" target="_blank" class="template-preview-link" aria-label="View Vintage live demo">
+            <div class="template-preview">
+              <img src="template-vintage/images/1.png" alt="Vintage — cinematic dark split-screen wedding invitation" loading="lazy" onerror="this.style.display='none'">
+              <div class="template-preview-fallback" style="background: linear-gradient(145deg, #1a1a18 0%, #3a6b52 100%)" aria-hidden="true"></div>
+              <div class="template-hover-cta" aria-hidden="true">
+                <span>View Live Demo</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+          </a>
+          <div class="template-meta">
+            <div class="template-header-row">
+              <h3 class="template-name">Vintage</h3>
+              <span class="template-badge">New</span>
+            </div>
+            <p class="template-desc">Cinematic dark elegance meets intimate storytelling. A split-screen iPhone frame, prewedding video backdrop, Tangerine script title, and a full love story timeline — crafted for the modern sacred couple.</p>
+            <div class="template-tags">
+              <span class="tag">Cinematic</span>
+              <span class="tag">Dark</span>
+              <span class="tag">Intimate</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="template-card reveal reveal-d2" id="card-dusk" aria-label="Dusk template">
+          <div class="template-preview">
+            <img src="template_dusk.png" alt="Dusk — dark romantic editorial wedding invitation" loading="lazy" onerror="this.style.display='none'">
+            <div class="template-preview-fallback" style="background: linear-gradient(145deg, #2C2C2A 0%, #3D7D91 100%)" aria-hidden="true"></div>
+            <div class="template-hover-cta" aria-hidden="true">
+              <span>View Live Demo</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="template-meta">
+            <div class="template-header-row">
+              <h3 class="template-name">Dusk</h3>
+              <span class="template-badge template-badge--dark">Signature</span>
+            </div>
+            <p class="template-desc">Deep teal dusk, cream serif type, film grain textures. The moment the sky turns sacred — romantic and unmistakably modern.</p>
+            <div class="template-tags">
+              <span class="tag">Dramatic</span>
+              <span class="tag">Romantic</span>
+              <span class="tag">Bold</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="template-card reveal reveal-d3" id="card-vow" aria-label="Vow template">
+          <div class="template-preview">
+            <img src="template_vow.png" alt="Vow — blush and teal editorial wedding invitation" loading="lazy" onerror="this.style.display='none'">
+            <div class="template-preview-fallback" style="background: linear-gradient(145deg, #F2A99B 0%, #5EA696 100%)" aria-hidden="true"></div>
+            <div class="template-hover-cta" aria-hidden="true">
+              <span>View Live Demo</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="template-meta">
+            <div class="template-header-row">
+              <h3 class="template-name">Vow</h3>
+              <span class="template-badge template-badge--rose">Beloved</span>
+            </div>
+            <p class="template-desc">Blush softness with teal precision. Centered symmetry, a singular decorative rule, and the tenderness of two lives intertwining.</p>
+            <div class="template-tags">
+              <span class="tag">Feminine</span>
+              <span class="tag">Tender</span>
+              <span class="tag">Classic</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="templates-footer reveal">
+        <p class="templates-footer-text">More collections launching in Autumn 2026</p>
+        <a href="#start" class="btn-link" id="templates-cta">Begin with a template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FEATURES
+  ═══════════════════════════════════════ -->
+  <section class="section features" id="features" aria-label="Features">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="features-header reveal">
+        <p class="eyebrow">What's Included</p>
+        <h2 class="section-title">Everything Your <em>Love Story</em><br>Deserves</h2>
+        <p class="section-body">Every Nivienne &amp; Co. invitation is a complete experience — beautifully crafted, thoughtfully engineered, and delivered with grace.</p>
+      </div>
+
+      <!-- Features Carousel -->
+      <div class="features-carousel reveal" id="features-carousel" aria-label="Features carousel">
+
+        <!-- Viewport -->
+        <div class="fc-viewport" id="fc-viewport">
+          <div class="fc-track" id="fc-track">
+
+            <!-- Slide 1 -->
+            <div class="fc-slide" aria-label="Slide 1 of 4">
+              <div class="feature-card" id="feat-rsvp">
+                <div class="feature-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                </div>
+                <h3>RSVP &amp; Guest Wishes</h3>
+                <p>Guests confirm attendance and leave heartfelt messages in a single seamless flow. No third-party forms, no broken links — just grace.</p>
+              </div>
+              <div class="feature-card" id="feat-countdown">
+                <div class="feature-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3>Live Countdown Timer</h3>
+                <p>A real-time countdown to your ceremony, building anticipation and keeping the sacred date alive in every guest's mind.</p>
+              </div>
+              <div class="feature-card" id="feat-gallery">
+                <div class="feature-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                </div>
+                <h3>Photo Gallery</h3>
+                <p>Curate a gallery of your most precious pre-wedding moments. Full-bleed, swipeable, and beautifully composed — every image, a memory.</p>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="fc-slide" aria-label="Slide 2 of 4">
+              <div class="feature-card" id="feat-music">
+                <div class="feature-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                </div>
+                <h3>Ambient Background Music</h3>
+                <p>Set the emotional tone before a single word is read. Choose a piece of music that speaks your love — guests toggle it with one quiet tap.</p>
+              </div>
+              <div class="feature-card" id="feat-maps">
+                <div class="feature-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <h3>Venue Maps &amp; Navigation</h3>
+                <p>One tap takes guests directly to turn-by-turn directions. Embedded maps with custom venue pins ensure no one arrives late to your sacred moment.</p>
+              </div>
+              <div class="feature-card" id="feat-savedate">
+                <div class="feature-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+                </div>
+                <h3>Save the Date Integration</h3>
+                <p>Guests add your wedding date directly to their phone calendar with a single tap — synced with native iOS and Android calendar apps.</p>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="fc-slide" aria-label="Slide 3 of 4">
+              <div class="feature-card" id="feat-lovestory">
+                <div class="feature-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </div>
+                <h3>Love Story Timeline</h3>
+                <p>Tell the story of how you found each other — from first glance to forever. A visual, scroll-through narrative your guests will remember.</p>
+              </div>
+              <div class="feature-card" id="feat-video">
+                <div class="feature-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+                </div>
+                <h3>Pre-wedding Video</h3>
+                <p>Embed your cinematic pre-wedding film directly in the invitation. Let guests feel the emotion before they even arrive at your celebration.</p>
+              </div>
+              <div class="feature-card" id="feat-gift">
+                <div class="feature-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5" rx="1"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+                </div>
+                <h3>Digital Gift Confirmation</h3>
+                <p>Guests confirm monetary gifts elegantly online. You receive a live dashboard of who has sent what — graceful, discreet, and organised.</p>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="fc-slide" aria-label="Slide 4 of 4">
+              <div class="feature-card" id="feat-qr">
+                <div class="feature-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM17 17h3v3h-3zM14 20h3"/></svg>
+                </div>
+                <h3>QR Code Check-in</h3>
+                <p>Each invitation carries a unique QR code. Guests are checked in instantly at the door — modern, professional, and deeply personal.</p>
+              </div>
+              <div class="feature-card" id="feat-tracking">
+                <div class="feature-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+                <h3>Invitation Tracking</h3>
+                <p>See who has opened your invitation, when they opened it, and from which link. Know your guests are informed — in real time.</p>
+              </div>
+              <div class="feature-card" id="feat-share">
+                <div class="feature-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                </div>
+                <h3>Unlimited Personalised Sharing</h3>
+                <p>Each guest receives a link addressed to them by name. Share via text, WhatsApp, or email — infinitely, without restriction.</p>
+              </div>
+            </div>
+
+          </div><!-- /.fc-track -->
+        </div><!-- /.fc-viewport -->
+
+        <!-- Controls -->
+        <div class="fc-controls">
+          <button class="fc-btn fc-btn--prev" id="fc-prev" aria-label="Previous slide">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="fc-dots" id="fc-dots" role="tablist" aria-label="Carousel navigation">
+            <button class="fc-dot fc-dot--active" id="fc-dot-0" role="tab" aria-selected="true"  aria-label="Slide 1"></button>
+            <button class="fc-dot"                id="fc-dot-1" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+            <button class="fc-dot"                id="fc-dot-2" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+            <button class="fc-dot"                id="fc-dot-3" role="tab" aria-selected="false" aria-label="Slide 4"></button>
+          </div>
+          <button class="fc-btn fc-btn--next" id="fc-next" aria-label="Next slide">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="fc-progress" aria-hidden="true">
+          <div class="fc-progress-bar" id="fc-progress-bar"></div>
+        </div>
+
+      </div><!-- /.features-carousel -->
+
+      <!-- Soft divider accent -->
+      <div class="features-divider reveal" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-icon">✦</span>
+        <span class="divider-line"></span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════ -->
+  <section class="section process" id="how-it-works" aria-label="How it works">
+    <div class="container">
+      <div class="section-header section-header--light reveal">
+        <p class="eyebrow eyebrow--light">The Process</p>
+        <h2 class="section-title section-title--light">Simple. Sacred.<br><em>Yours.</em></h2>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step reveal reveal-d1" id="step-1">
+          <div class="step-num" aria-hidden="true"><span>01</span></div>
+          <div class="step-content">
+            <h3>Choose Your Template</h3>
+            <p>Browse our editorial collection. Each template is a distinct visual world designed around a feeling, not just a colour palette.</p>
+          </div>
+        </div>
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step reveal reveal-d2" id="step-2">
+          <div class="step-num" aria-hidden="true"><span>02</span></div>
+          <div class="step-content">
+            <h3>Share Your Story</h3>
+            <p>Fill in your details — names, date, venue, and the moments that define your love. Upload your favourite photographs together.</p>
+          </div>
+        </div>
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step reveal reveal-d3" id="step-3">
+          <div class="step-num" aria-hidden="true"><span>03</span></div>
+          <div class="step-content">
+            <h3>We Craft It for You</h3>
+            <p>Our team personalises your invitation with editorial precision. Every detail reviewed, every pixel considered, within 48 hours.</p>
+          </div>
+        </div>
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step reveal reveal-d4" id="step-4">
+          <div class="step-num" aria-hidden="true"><span>04</span></div>
+          <div class="step-content">
+            <h3>Share &amp; Celebrate</h3>
+            <p>Receive your unique invitation link. Share via text, email, or social media. Track RSVPs live from your personal dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PRICING — commented out, preserved for future use
+  ═══════════════════════════════════════
+  <section class="section pricing" id="pricing" aria-label="Pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">Investment</p>
+        <h2 class="section-title">Transparent,<br><em>Simple</em> Pricing</h2>
+        <p class="section-body">One-time payment. No subscriptions. No hidden fees. Just a beautiful, lasting invitation for one of life's most sacred days.</p>
+      </div>
+
+      <div class="pricing-grid">
+        ~~~ Studio ~~~
+        <div class="pricing-card reveal reveal-d1" id="pricing-studio">
+          <div class="pricing-plan">Studio</div>
+          <div class="pricing-amount">
+            <sup>$</sup><span class="pricing-num">49</span>
+          </div>
+          <p class="pricing-desc">For the couple who knows exactly what they want — clean, beautiful, and complete.</p>
+          <div class="pricing-divider" aria-hidden="true"></div>
+          <ul class="pricing-list" role="list">
+            <li><span class="check" aria-hidden="true">✓</span> 1 curated template</li>
+            <li><span class="check" aria-hidden="true">✓</span> Full personalization</li>
+            <li><span class="check" aria-hidden="true">✓</span> RSVP form (50 guests)</li>
+            <li><span class="check" aria-hidden="true">✓</span> Countdown timer</li>
+            <li><span class="check" aria-hidden="true">✓</span> Google Maps embed</li>
+            <li><span class="check" aria-hidden="true">✓</span> 3-month active link</li>
+          </ul>
+          <a href="#start" class="pricing-btn pricing-btn--outline" id="btn-studio">Begin Here</a>
+        </div>
+
+        ~~~ Atelier (Featured) ~~~
+        <div class="pricing-card pricing-card--featured reveal reveal-d2" id="pricing-atelier">
+          <div class="pricing-ribbon" aria-label="Most loved">Most Loved</div>
+          <div class="pricing-plan pricing-plan--light">Atelier</div>
+          <div class="pricing-amount pricing-amount--light">
+            <sup>$</sup><span class="pricing-num">99</span>
+          </div>
+          <p class="pricing-desc pricing-desc--light">The complete editorial experience — everything you need for an unforgettable first impression.</p>
+          <div class="pricing-divider pricing-divider--light" aria-hidden="true"></div>
+          <ul class="pricing-list pricing-list--light" role="list">
+            <li><span class="check" aria-hidden="true">✓</span> All 3 templates + new releases</li>
+            <li><span class="check" aria-hidden="true">✓</span> Unlimited RSVP guests</li>
+            <li><span class="check" aria-hidden="true">✓</span> Ambient music toggle</li>
+            <li><span class="check" aria-hidden="true">✓</span> QR code for sharing</li>
+            <li><span class="check" aria-hidden="true">✓</span> Guest message wall</li>
+            <li><span class="check" aria-hidden="true">✓</span> 12-month active link</li>
+            <li><span class="check" aria-hidden="true">✓</span> Priority support</li>
+          </ul>
+          <a href="#start" class="pricing-btn pricing-btn--filled" id="btn-atelier">This Is the One</a>
+        </div>
+
+        ~~~ Maison ~~~
+        <div class="pricing-card reveal reveal-d3" id="pricing-maison">
+          <div class="pricing-plan">Maison</div>
+          <div class="pricing-amount">
+            <sup>$</sup><span class="pricing-num">199</span>
+          </div>
+          <p class="pricing-desc">For couples who desire the ultimate in personal luxury — a completely bespoke, white-glove experience.</p>
+          <div class="pricing-divider" aria-hidden="true"></div>
+          <ul class="pricing-list" role="list">
+            <li><span class="check" aria-hidden="true">✓</span> Everything in Atelier</li>
+            <li><span class="check" aria-hidden="true">✓</span> Custom domain</li>
+            <li><span class="check" aria-hidden="true">✓</span> Printable PDF export</li>
+            <li><span class="check" aria-hidden="true">✓</span> Save the Date add-on</li>
+            <li><span class="check" aria-hidden="true">✓</span> Concierge onboarding call</li>
+            <li><span class="check" aria-hidden="true">✓</span> Lifetime active link</li>
+            <li><span class="check" aria-hidden="true">✓</span> Dedicated account manager</li>
+          </ul>
+          <a href="#start" class="pricing-btn pricing-btn--outline" id="btn-maison">Go Bespoke</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- ═══════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════ -->
+  <section class="section testimonials" id="testimonials" aria-label="Testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">Love Notes</p>
+        <h2 class="section-title">From <em>Real</em> Couples</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial reveal reveal-d1" id="t1">
+          <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+          <blockquote class="testimonial-text">Every guest told us our invitation was the most beautiful they'd ever received. Nivienne &amp; Co. didn't just design an invite — they captured the feeling of our entire wedding.</blockquote>
+          <footer class="testimonial-footer">
+            <div class="testimonial-avatar avatar-1" aria-hidden="true"></div>
+            <div class="testimonial-info">
+              <cite class="testimonial-name">Emma &amp; James Harrington</cite>
+              <span class="testimonial-date">Married in Newport, Rhode Island</span>
+            </div>
+          </footer>
+        </div>
+
+        <div class="testimonial reveal reveal-d2" id="t2">
+          <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+          <blockquote class="testimonial-text">The "Dusk" template was breathtaking. Our guests were moved before they even opened the link. The RSVP dashboard made planning effortless. Worth every penny and more.</blockquote>
+          <footer class="testimonial-footer">
+            <div class="testimonial-avatar avatar-2" aria-hidden="true"></div>
+            <div class="testimonial-info">
+              <cite class="testimonial-name">Sophia &amp; Michael Chen</cite>
+              <span class="testimonial-date">Married in Napa Valley, California</span>
+            </div>
+          </footer>
+        </div>
+
+        <div class="testimonial reveal reveal-d3" id="t3">
+          <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+          <blockquote class="testimonial-text">I cried when I saw the final design. It was exactly what I had in my heart but couldn't articulate. This team has a rare gift for translating love into visual art.</blockquote>
+          <footer class="testimonial-footer">
+            <div class="testimonial-avatar avatar-3" aria-hidden="true"></div>
+            <div class="testimonial-info">
+              <cite class="testimonial-name">Olivia &amp; Noah Williams</cite>
+              <span class="testimonial-date">Married in Charleston, South Carolina</span>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FINAL CTA
+  ═══════════════════════════════════════ -->
+  <section class="cta-section" id="start" aria-label="Call to action">
+    <canvas id="cta-canvas" aria-hidden="true"></canvas>
+    <div class="cta-inner">
+      <p class="eyebrow eyebrow--light reveal">Your Story Begins Here</p>
+      <h2 class="cta-title reveal">Your Love Deserves<br>to Be <em>Beautifully Told</em></h2>
+      <p class="cta-body reveal">Join hundreds of devoted couples who chose Nivienne &amp; Co. to announce the most sacred day of their lives — with grace, beauty, and devotion.</p>
+      <div class="cta-actions reveal">
+        <a href="#templates" class="btn-white" id="cta-primary">Choose Your Template</a>
+        <a href="mailto:hello@nivienneandco.com" class="btn-ghost-white" id="cta-secondary">Write to Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2 class="footer-logo">Nivienne &amp; Co.</h2>
+          <p class="footer-tagline">Luxury editorial digital wedding invitations for the modern American couple. Sacred, beautiful, timeless.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" id="social-ig" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social-icon" id="social-pt" aria-label="Pinterest">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.77 1.27-5.36 1.27-5.36s-.32-.65-.32-1.61c0-1.51.88-2.64 1.97-2.64.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.54 1.97 1.6 1.97 1.92 0 3.22-2.46 3.22-5.37 0-2.22-1.5-3.88-4.22-3.88-3.08 0-5 2.3-5 4.88 0 .89.26 1.51.67 2 .07.08.08.15.06.24l-.24.97c-.04.14-.13.17-.3.1-1.12-.46-1.64-1.69-1.64-3.08 0-2.89 2.44-6.4 7.29-6.4 3.92 0 6.52 2.84 6.52 5.9 0 4.05-2.25 7.1-5.55 7.1-1.11 0-2.16-.6-2.52-1.27l-.69 2.64c-.25.95-.93 2.14-1.38 2.87.99.3 2.04.47 3.12.47 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            </a>
+            <a href="#" class="social-icon" id="social-tk" aria-label="TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.22 8.22 0 004.79 1.53V6.74a4.85 4.85 0 01-1.02-.05z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <ul role="list">
+            <li><a href="#templates">Vintage</a></li>
+            <li><a href="#templates">Dusk</a></li>
+            <li><a href="#templates">Vow</a></li>
+            <li><a href="#templates">All Templates</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul role="list">
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#">For Planners</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul role="list">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="mailto:hello@nivienneandco.com">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nivienne &amp; Co. All rights reserved.</p>
+        <p class="footer-craft">Designed with devotion and love ✦</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
