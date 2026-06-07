@@ -3,6 +3,33 @@
    Adam & Valerie · Nivienne & Co.
 ═══════════════════════════════════════════════════════ */
 
+/* ── PROTECTION ─────────────────────────────────────── */
+(function () {
+  document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key.toUpperCase())) ||
+        (e.ctrlKey && e.key.toUpperCase() === 'U')) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  });
+
+  var threshold = 160;
+  setInterval(function () {
+    if (window.outerWidth  - window.innerWidth  > threshold ||
+        window.outerHeight - window.innerHeight > threshold) {
+      document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:serif;font-size:1.2rem;color:#888;letter-spacing:0.1em;">This demo is protected.</div>';
+    }
+  }, 1000);
+})();
+
+/* ═══════════════════════════════════════════════════════
+   SOLSTICE — script.js  (cinematic split-screen)
+   Adam & Valerie · Nivienne & Co.
+═══════════════════════════════════════════════════════ */
+
 /* ── 0. LOADING SCREEN ──────────────────────────────── */
 (function () {
   // All couple images — groom.png and bride.jpeg excluded
