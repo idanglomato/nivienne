@@ -70,10 +70,10 @@
     'media/13.jpeg'
   ];
 
-  var DURATION  = 3600;   // total loader duration ms
-  var TICK_RATE = 600;     // ms between % updates
-  var DELAY_MAX = 600;     // constant 600ms
-  var DELAY_MIN = 600;     // constant 600ms
+  var DURATION  = 3600;    // total loader duration ms
+  var TICK_RATE = 16;     // ms between % updates
+  var DELAY_MAX = 40;     // constant 40ms
+  var DELAY_MIN = 40;     // constant 40ms
 
   var loaderEl = document.getElementById('loader-screen');
   var fill     = document.getElementById('loader-bar-fill');
@@ -94,7 +94,7 @@
 
   /* ── Dynamic image cycling (recursive setTimeout) ── */
   function currentDelay() {
-    return 80; // constant 80ms
+    return 100; // 100ms per image
   }
 
   function swapImage() {
