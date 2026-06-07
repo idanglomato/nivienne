@@ -66,11 +66,10 @@ button { cursor: pointer; border: none; background: none; }
 .loader-eyebrow {
   font-family: var(--sans);
   font-size: 0.8rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.16em;
   font-weight: 300;
   color: rgba(255,255,255,0.55);
-  text-transform: uppercase;
-  text-align: left;
+  text-align: center;
   line-height: 1.9;
   white-space: nowrap;
 }
@@ -98,11 +97,10 @@ button { cursor: pointer; border: none; background: none; }
 .loader-names {
   font-family: var(--sans);
   font-size: 0.82rem;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   font-weight: 300;
   color: rgba(255,255,255,0.75);
-  text-transform: uppercase;
-  text-align: right;
+  text-align: center;
   min-height: 1.4em;
   width: 100%;
 }

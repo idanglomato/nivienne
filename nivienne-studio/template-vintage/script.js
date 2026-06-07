@@ -7,18 +7,18 @@
 (function () {
   // All couple images — groom.png and bride.jpeg excluded
   var IMGS = [
-    'images/1.png',
-    'images/2.jpeg',
-    'images/3.jpeg',
-    'images/4.jpeg',
-    'images/5.jpg',
-    'images/6.jpeg',
-    'images/7.jpeg',
-    'images/8.jpeg',
-    'images/9.jpeg',
-    'images/10.jpg',
-    'images/12.jpeg',
-    'images/13.jpeg'
+    'media/1.png',
+    'media/2.jpeg',
+    'media/3.jpeg',
+    'media/4.jpeg',
+    'media/5.jpg',
+    'media/6.jpeg',
+    'media/7.jpeg',
+    'media/8.jpeg',
+    'media/9.jpeg',
+    'media/10.jpg',
+    'media/12.jpeg',
+    'media/13.jpeg'
   ];
 
   var DURATION  = 3600;   // total loader duration ms
@@ -137,9 +137,9 @@
   // Parallel: both start together
   setTimeout(function () {
     // Single line: full phrase at once
-    typewriterLTR(twLine1, 'WE INVITE YOU TO CELEBRATE', TW_SPEED, null);
+    typewriterLTR(twLine1, 'We invite you to celebrate', TW_SPEED, null);
     // RTL: names starts at same time
-    typewriterRTL(twNames, 'ADAM & VALERIE', TW_SPEED, null);
+    typewriterRTL(twNames, 'Adam & Valerie', TW_SPEED, null);
   }, 200);
 
 })();
@@ -362,11 +362,11 @@ function showToast(msg) {
 /* ── 10. Gallery Slider ─────────────────────────────── */
 (function () {
   var PHOTOS = [
-    'images/1.png',   'images/2.jpeg',  'images/3.jpeg',
-    'images/4.jpeg',  'images/5.jpg',   'images/6.jpeg',
-    'images/7.jpeg',  'images/8.jpeg',  'images/9.jpeg',
-    'images/10.jpg',  'images/12.jpeg', 'images/13.jpeg',
-    'images/3.jpeg'
+    'media/1.png',   'media/2.jpeg',  'media/3.jpeg',
+    'media/4.jpeg',  'media/5.jpg',   'media/6.jpeg',
+    'media/7.jpeg',  'media/8.jpeg',  'media/9.jpeg',
+    'media/10.jpg',  'media/12.jpeg', 'media/13.jpeg',
+    'media/3.jpeg'
   ];
   var total   = PHOTOS.length;
   var current = 0;
