@@ -25,6 +25,28 @@
   }, 1000);
 })();
 
+/* ── PROTECTION ─────────────────────────────────────── */
+(function () {
+  document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key.toUpperCase())) ||
+        (e.ctrlKey && e.key.toUpperCase() === 'U')) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  });
+
+  var threshold = 160;
+  setInterval(function () {
+    if (window.outerWidth  - window.innerWidth  > threshold ||
+        window.outerHeight - window.innerHeight > threshold) {
+      document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:serif;font-size:1.2rem;color:#888;letter-spacing:0.1em;">This demo is protected.</div>';
+    }
+  }, 1000);
+})();
+
 /* ═══════════════════════════════════════════════════════
    SOLSTICE — script.js  (cinematic split-screen)
    Adam & Valerie · Nivienne & Co.
@@ -392,8 +414,7 @@ function showToast(msg) {
     'media/1.png',   'media/2.jpeg',  'media/3.jpeg',
     'media/4.jpeg',  'media/5.jpg',   'media/6.jpeg',
     'media/7.jpeg',  'media/8.jpeg',  'media/9.jpeg',
-    'media/10.jpg',  'media/12.jpeg', 'media/13.jpeg',
-    'media/3.jpeg'
+    'media/10.jpg',  'media/12.jpeg', 'media/13.jpeg'
   ];
   var total   = PHOTOS.length;
   var current = 0;
