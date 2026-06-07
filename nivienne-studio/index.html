@@ -48,6 +48,11 @@
 
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M3 3L17 17M17 3L3 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </button>
     <div class="mobile-menu-inner">
       <a href="#templates" class="mobile-link" id="m-templates">Collections</a>
       <a href="#features" class="mobile-link" id="m-features">Features</a>
@@ -177,7 +182,7 @@
         <article class="template-card reveal reveal-d1" id="card-vintage" aria-label="Vintage template">
           <a href="template-vintage/index.html" target="_blank" class="template-preview-link" aria-label="View Vintage live demo">
             <div class="template-preview">
-              <img src="template-vintage/images/1.png" alt="Vintage — cinematic dark split-screen wedding invitation" loading="lazy" onerror="this.style.display='none'">
+              <img src="template-vintage/media/1.png" alt="Vintage — cinematic dark split-screen wedding invitation" loading="lazy" onerror="this.style.display='none'">
               <div class="template-preview-fallback" style="background: linear-gradient(145deg, #1a1a18 0%, #3a6b52 100%)" aria-hidden="true"></div>
               <div class="template-hover-cta" aria-hidden="true">
                 <span>View Live Demo</span>
@@ -268,7 +273,7 @@
         <p class="section-body">Every Nivienne &amp; Co. invitation is a complete experience — beautifully crafted, thoughtfully engineered, and delivered with grace.</p>
       </div>
 
-      <!-- Features Carousel -->
+      <!-- Features Carousel (desktop) -->
       <div class="features-carousel reveal" id="features-carousel" aria-label="Features carousel">
 
         <!-- Viewport -->
@@ -278,23 +283,14 @@
             <!-- Slide 1 -->
             <div class="fc-slide" aria-label="Slide 1 of 4">
               <div class="feature-card" id="feat-rsvp">
-                <div class="feature-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                </div>
                 <h3>RSVP &amp; Guest Wishes</h3>
                 <p>Guests confirm attendance and leave heartfelt messages in a single seamless flow. No third-party forms, no broken links — just grace.</p>
               </div>
               <div class="feature-card" id="feat-countdown">
-                <div class="feature-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </div>
                 <h3>Live Countdown Timer</h3>
                 <p>A real-time countdown to your ceremony, building anticipation and keeping the sacred date alive in every guest's mind.</p>
               </div>
               <div class="feature-card" id="feat-gallery">
-                <div class="feature-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                </div>
                 <h3>Photo Gallery</h3>
                 <p>Curate a gallery of your most precious pre-wedding moments. Full-bleed, swipeable, and beautifully composed — every image, a memory.</p>
               </div>
@@ -303,23 +299,14 @@
             <!-- Slide 2 -->
             <div class="fc-slide" aria-label="Slide 2 of 4">
               <div class="feature-card" id="feat-music">
-                <div class="feature-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                </div>
                 <h3>Ambient Background Music</h3>
                 <p>Set the emotional tone before a single word is read. Choose a piece of music that speaks your love — guests toggle it with one quiet tap.</p>
               </div>
               <div class="feature-card" id="feat-maps">
-                <div class="feature-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </div>
                 <h3>Venue Maps &amp; Navigation</h3>
                 <p>One tap takes guests directly to turn-by-turn directions. Embedded maps with custom venue pins ensure no one arrives late to your sacred moment.</p>
               </div>
               <div class="feature-card" id="feat-savedate">
-                <div class="feature-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
-                </div>
                 <h3>Save the Date Integration</h3>
                 <p>Guests add your wedding date directly to their phone calendar with a single tap — synced with native iOS and Android calendar apps.</p>
               </div>
@@ -328,23 +315,14 @@
             <!-- Slide 3 -->
             <div class="fc-slide" aria-label="Slide 3 of 4">
               <div class="feature-card" id="feat-lovestory">
-                <div class="feature-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-                </div>
                 <h3>Love Story Timeline</h3>
                 <p>Tell the story of how you found each other — from first glance to forever. A visual, scroll-through narrative your guests will remember.</p>
               </div>
               <div class="feature-card" id="feat-video">
-                <div class="feature-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
-                </div>
                 <h3>Pre-wedding Video</h3>
                 <p>Embed your cinematic pre-wedding film directly in the invitation. Let guests feel the emotion before they even arrive at your celebration.</p>
               </div>
               <div class="feature-card" id="feat-gift">
-                <div class="feature-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5" rx="1"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
-                </div>
                 <h3>Digital Gift Confirmation</h3>
                 <p>Guests confirm monetary gifts elegantly online. You receive a live dashboard of who has sent what — graceful, discreet, and organised.</p>
               </div>
@@ -353,23 +331,14 @@
             <!-- Slide 4 -->
             <div class="fc-slide" aria-label="Slide 4 of 4">
               <div class="feature-card" id="feat-qr">
-                <div class="feature-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM17 17h3v3h-3zM14 20h3"/></svg>
-                </div>
                 <h3>QR Code Check-in</h3>
                 <p>Each invitation carries a unique QR code. Guests are checked in instantly at the door — modern, professional, and deeply personal.</p>
               </div>
               <div class="feature-card" id="feat-tracking">
-                <div class="feature-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                </div>
                 <h3>Invitation Tracking</h3>
                 <p>See who has opened your invitation, when they opened it, and from which link. Know your guests are informed — in real time.</p>
               </div>
               <div class="feature-card" id="feat-share">
-                <div class="feature-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-                </div>
                 <h3>Unlimited Personalised Sharing</h3>
                 <p>Each guest receives a link addressed to them by name. Share via text, WhatsApp, or email — infinitely, without restriction.</p>
               </div>
@@ -399,7 +368,23 @@
           <div class="fc-progress-bar" id="fc-progress-bar"></div>
         </div>
 
-      </div><!-- /.features-carousel -->
+      </div><!-- /.features-carousel (desktop) -->
+
+      <!-- Features flat grid (mobile only) -->
+      <div class="features-mobile-grid">
+        <div class="feature-card"><h3>RSVP &amp; Guest Wishes</h3><p>Guests confirm attendance and leave heartfelt messages in a single seamless flow. No third-party forms, no broken links — just grace.</p></div>
+        <div class="feature-card"><h3>Live Countdown Timer</h3><p>A real-time countdown to your ceremony, building anticipation and keeping the sacred date alive in every guest's mind.</p></div>
+        <div class="feature-card"><h3>Photo Gallery</h3><p>Curate a gallery of your most precious pre-wedding moments. Full-bleed, swipeable, and beautifully composed.</p></div>
+        <div class="feature-card"><h3>Ambient Background Music</h3><p>Set the emotional tone before a single word is read. Guests toggle it with one quiet tap.</p></div>
+        <div class="feature-card"><h3>Venue Maps &amp; Navigation</h3><p>One tap takes guests directly to turn-by-turn directions — no one arrives late to your sacred moment.</p></div>
+        <div class="feature-card"><h3>Save the Date Integration</h3><p>Guests add your wedding date directly to their phone calendar, synced with iOS and Android.</p></div>
+        <div class="feature-card"><h3>Love Story Timeline</h3><p>Tell the story of how you found each other — a visual, scroll-through narrative your guests will remember.</p></div>
+        <div class="feature-card"><h3>Pre-wedding Video</h3><p>Embed your cinematic pre-wedding film directly in the invitation. Let guests feel the emotion.</p></div>
+        <div class="feature-card"><h3>Digital Gift Confirmation</h3><p>Guests confirm monetary gifts elegantly online. A live dashboard of who has sent what — graceful and organised.</p></div>
+        <div class="feature-card"><h3>QR Code Check-in</h3><p>Each invitation carries a unique QR code. Guests are checked in instantly at the door.</p></div>
+        <div class="feature-card"><h3>Invitation Tracking</h3><p>See who has opened your invitation, when, and from which link — in real time.</p></div>
+        <div class="feature-card"><h3>Unlimited Personalised Sharing</h3><p>Each guest receives a link addressed to them by name. Share via text, WhatsApp, or email — infinitely.</p></div>
+      </div><!-- /.features-mobile-grid -->
 
       <!-- Soft divider accent -->
       <div class="features-divider reveal" aria-hidden="true">
@@ -608,8 +593,12 @@
         <div class="footer-brand">
           <h2 class="footer-logo">Nivienne &amp; Co.</h2>
           <p class="footer-tagline">Luxury editorial digital wedding invitations for the modern American couple. Sacred, beautiful, timeless.</p>
+          <div class="footer-contact">
+            <a href="https://wa.me/6287790004963" class="footer-contact-link" target="_blank" rel="noopener noreferrer">+62877-9000-4963</a>
+            <a href="https://instagram.com/nivienne_studio" class="footer-contact-link" target="_blank" rel="noopener noreferrer">@nivienne_studio</a>
+          </div>
           <div class="footer-socials">
-            <a href="#" class="social-icon" id="social-ig" aria-label="Instagram">
+            <a href="https://instagram.com/nivienne_studio" class="social-icon" id="social-ig" aria-label="Instagram @nivienne_studio" target="_blank" rel="noopener noreferrer">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
             </a>
             <a href="#" class="social-icon" id="social-pt" aria-label="Pinterest">
@@ -620,6 +609,7 @@
             </a>
           </div>
         </div>
+        <div class="footer-cols-row">
         <div class="footer-col">
           <h4>Collections</h4>
           <ul role="list">
@@ -643,9 +633,11 @@
           <ul role="list">
             <li><a href="#">FAQ</a></li>
             <li><a href="mailto:hello@nivienneandco.com">Contact Us</a></li>
+            <li><a href="https://wa.me/6287790004963" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
           </ul>
+        </div>
         </div>
       </div>
       <div class="footer-bottom">

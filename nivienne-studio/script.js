@@ -89,6 +89,9 @@
   });
   mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
 
+  const menuCloseBtn = document.getElementById('mobile-menu-close');
+  if (menuCloseBtn) menuCloseBtn.addEventListener('click', closeMenu);
+
 
   /* ════════════════════════════════════════
      4. HERO CANVAS — MOUSE-REACTIVE GLOW ORBS
@@ -474,8 +477,6 @@
     const BREAKPOINT = 580;
 
     const configs = [
-      { track: '.philosophy-right',  items: '.pillar',        parent: '.philosophy-right' },
-      { track: '.templates-grid',    items: '.template-card', parent: '.templates-grid'   },
       { track: '.process-steps',     items: '.process-step',  parent: '.process-steps'    },
       { track: '.testimonials-grid', items: '.testimonial',   parent: '.testimonials-grid'},
     ];
