@@ -49,9 +49,9 @@
   ];
 
   var DURATION  = 3600;   // total loader duration ms
-  var TICK_RATE = 40;     // ms between % updates
-  var DELAY_MAX = 40;     // constant 40ms
-  var DELAY_MIN = 40;     // constant 40ms
+  var TICK_RATE = 100;     // ms between % updates
+  var DELAY_MAX = 100;     // constant 100ms
+  var DELAY_MIN = 100;     // constant 100ms
 
   var loaderEl = document.getElementById('loader-screen');
   var fill     = document.getElementById('loader-bar-fill');
