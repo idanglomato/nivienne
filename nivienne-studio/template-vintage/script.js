@@ -66,6 +66,7 @@
     'media/8.jpeg',
     'media/9.jpeg',
     'media/10.jpg',
+    'media/11.jpeg',
     'media/12.jpeg',
     'media/13.jpeg'
   ];
@@ -414,7 +415,8 @@ function showToast(msg) {
     'media/1.png',   'media/2.jpeg',  'media/3.jpeg',
     'media/4.jpeg',  'media/5.jpg',   'media/6.jpeg',
     'media/7.jpeg',  'media/8.jpeg',  'media/9.jpeg',
-    'media/10.jpg',  'media/12.jpeg', 'media/13.jpeg'
+    'media/10.jpg',  'media/11.jpeg', 'media/12.jpeg',
+    'media/13.jpeg'
   ];
   var total   = PHOTOS.length;
   var current = 0;
@@ -466,7 +468,23 @@ function showToast(msg) {
     if (e.key === 'ArrowLeft')  goTo(current - 1);
   });
 
-  // Touch swipe
+  // Touch swipe on lightbox
+  var lbTouchX = 0;
+  var lbTouchY = 0;
+  lightbox.addEventListener('touchstart', function (e) {
+    lbTouchX = e.touches[0].clientX;
+    lbTouchY = e.touches[0].clientY;
+  }, { passive: true });
+  lightbox.addEventListener('touchend', function (e) {
+    var dx = e.changedTouches[0].clientX - lbTouchX;
+    var dy = e.changedTouches[0].clientY - lbTouchY;
+    // Only swipe if horizontal movement dominates
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+      goTo(dx < 0 ? current + 1 : current - 1);
+    }
+  }, { passive: true });
+
+  // Touch swipe on card (thumbnail)
   var touchX = 0;
   card.addEventListener('touchstart', function (e) { touchX = e.touches[0].clientX; }, { passive: true });
   card.addEventListener('touchend', function (e) {
@@ -476,3 +494,52 @@ function showToast(msg) {
 
   goTo(0);
 })();
+
+/* ── INVITATION NAV ─────────────────────────────────── */
+(function () {
+  var nav    = document.getElementById('inv-nav');
+  var toggle = document.getElementById('inv-nav-toggle');
+  var menu   = document.getElementById('inv-nav-menu');
+  var links  = document.querySelectorAll('.inv-nav-link');
+  var rp     = document.getElementById('right-panel');
+
+  if (!nav || !toggle || !rp) return;
+
+  // Toggle open/close
+  toggle.addEventListener('click', function () {
+    nav.classList.toggle('open');
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!nav.contains(e.target)) nav.classList.remove('open');
+  });
+
+  // Smooth scroll to section inside right-panel + close menu
+  links.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var targetId = link.getAttribute('data-target');
+      var target   = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      nav.classList.remove('open');
+    });
+  });
+
+  // Active state — highlight current section
+  var sections = document.querySelectorAll('.rp-section[id]');
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var id = entry.target.getAttribute('id');
+        links.forEach(function (link) {
+          link.classList.toggle('active', link.getAttribute('data-target') === id);
+        });
+      }
+    });
+  }, { root: rp, threshold: 0.5 });
+
+  sections.forEach(function (s) { observer.observe(s); });
+}());

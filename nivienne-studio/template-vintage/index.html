@@ -124,11 +124,6 @@
 
       <main class="right-panel" id="right-panel">
 
-      <!-- Music button -->
-      <button class="music-btn" id="music-btn" aria-label="Toggle background music">
-        <svg id="icon-music-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        <svg id="icon-music-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none"><line x1="1" y1="1" x2="23" y2="23"/><path d="M9 9v9m3-7l9-2v8M6 18a3 3 0 100-6 3 3 0 000 6z"/></svg>
-      </button>
       <audio id="bg-music" loop>
         <source src="media/piano-music.mp3" type="audio/mpeg">
       </audio>
@@ -502,6 +497,24 @@
 
     </main><!-- /.right-panel -->
     </div><!-- /.phone-wrap -->
+
+    <!-- Music + Nav — float beside phone frame -->
+    <button class="music-btn" id="music-btn" aria-label="Toggle background music">
+      <svg id="icon-music-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      <svg id="icon-music-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none"><line x1="1" y1="1" x2="23" y2="23"/><path d="M9 9v9m3-7l9-2v8M6 18a3 3 0 100-6 3 3 0 000 6z"/></svg>
+    </button>
+    <nav class="inv-nav" id="inv-nav">
+      <button class="inv-nav-toggle" id="inv-nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="inv-nav-menu" id="inv-nav-menu">
+        <a class="inv-nav-link" href="#s8"  data-target="s8">Our Story</a>
+        <a class="inv-nav-link" href="#s5"  data-target="s5">Details</a>
+        <a class="inv-nav-link" href="#s9"  data-target="s9">Gallery</a>
+        <a class="inv-nav-link" href="#s10" data-target="s10">RSVP</a>
+      </div>
+    </nav>
+
   </div><!-- /.invitation -->
 
   <script src="script.js"></script>

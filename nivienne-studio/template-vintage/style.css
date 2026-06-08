@@ -404,7 +404,7 @@ button { cursor: pointer; border: none; background: none; }
 
 /* Music button */
 .music-btn {
-  position: fixed; top: 1.5rem; right: 1.5rem; z-index: 100;
+  position: fixed; top: 1.5rem; left: 1.5rem; z-index: 300;
   width: 38px; height: 38px;
   display: flex; align-items: center; justify-content: center;
   background: rgba(28,28,26,0.6);
@@ -414,6 +414,76 @@ button { cursor: pointer; border: none; background: none; }
   transition: transform 300ms var(--spring), background 300ms ease;
 }
 .music-btn:hover { transform: scale(1.1); background: var(--sage-dark); }
+
+/* ── INVITATION NAV ──────────────────────────────────── */
+.inv-nav {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 300;
+}
+
+.inv-nav-toggle {
+  width: 38px; height: 38px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 5px;
+  background: rgba(28,28,26,0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 300ms ease, transform 300ms var(--spring);
+}
+.inv-nav-toggle:hover { background: var(--sage-dark); transform: scale(1.1); }
+.inv-nav-toggle span {
+  display: block; width: 14px; height: 1px;
+  background: var(--ivory);
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+.inv-nav.open .inv-nav-toggle span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.inv-nav.open .inv-nav-toggle span:nth-child(2) { opacity: 0; }
+.inv-nav.open .inv-nav-toggle span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+.inv-nav-menu {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  right: 0;
+  left: auto;
+  background: rgba(18,18,16,0.92);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  min-width: 160px;
+  display: flex; flex-direction: column;
+  opacity: 0; pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 280ms ease, transform 280ms ease;
+}
+.inv-nav.open .inv-nav-menu {
+  opacity: 1; pointer-events: all;
+  transform: translateY(0);
+}
+
+.inv-nav-link {
+  padding: 0.55rem 1.25rem;
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 200ms ease, background 200ms ease, padding-left 200ms ease;
+  border-left: 2px solid transparent;
+}
+.inv-nav-link:hover,
+.inv-nav-link.active {
+  color: var(--ivory);
+  background: rgba(255,255,255,0.04);
+  padding-left: 1.5rem;
+  border-left-color: var(--sage);
+}
 
 /* ── SECTION SHARED ──────────────────────────────────── */
 .rp-section {
@@ -1244,5 +1314,6 @@ button { cursor: pointer; border: none; background: none; }
   .gift-grid { grid-template-columns: 1fr; }
 
   /* Music */
-  .music-btn { top: 1rem; right: 1rem; }
+  .music-btn { top: 1rem; left: 1rem; }
+  .inv-nav { top: 1rem; right: 1rem; }
 }
