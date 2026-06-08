@@ -321,6 +321,10 @@ btn.addEventListener('click', () => {
 });
 
 /* ── 7. RSVP wizard ─────────────────────────────────── */
+
+/* ─── Google Apps Script endpoint for RSVP tracker ─── */
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxj-XFtLSke7nW6JwVEUJI1ImDa4xx9vY8X7CzqzW-QiHM72-rTvovm6vBorNlZgmM/exec';
+
 (function () {
   var currentStep = 1;
   var attendance  = 'yes';
@@ -377,6 +381,22 @@ btn.addEventListener('click', () => {
 
   // Send
   document.getElementById('rsvp-send').addEventListener('click', function () {
+    var name    = (document.getElementById('rsvp-name').value    || '').trim();
+    var guests  = (document.getElementById('rsvp-guests').value  || '1').trim();
+    var wishes  = (document.getElementById('rsvp-wishes').value  || '').trim();
+
+    // Submit to Google Apps Script if URL is configured
+    if (SCRIPT_URL && SCRIPT_URL !== 'YOUR_APPS_SCRIPT_URL_HERE') {
+      var params = new URLSearchParams({
+        name:       name,
+        attendance: attendance,
+        guests:     guests,
+        wishes:     wishes
+      });
+      fetch(SCRIPT_URL + '?' + params.toString(), { method: 'GET', mode: 'no-cors' })
+        .catch(function () {}); // silent fail — form still advances
+    }
+
     setStep(5);
   });
 })();
