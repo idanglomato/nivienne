@@ -94,7 +94,7 @@
 
   /* ── Dynamic image cycling (recursive setTimeout) ── */
   function currentDelay() {
-    return 100; // 100ms per image
+    return 180; // 180ms per image
   }
 
   function swapImage() {
