@@ -322,8 +322,13 @@ btn.addEventListener('click', () => {
 
 /* ── 7. RSVP wizard ─────────────────────────────────── */
 
-/* ─── Google Apps Script endpoint for RSVP tracker ─── */
-var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxj-XFtLSke7nW6JwVEUJI1ImDa4xx9vY8X7CzqzW-QiHM72-rTvovm6vBorNlZgmM/exec';
+/* ─── Google Apps Script endpoint for RSVP tracker ───
+   SCRIPT_URL : your deployed Web App URL (same for ALL clients)
+   COUPLE_KEY : unique per couple, no spaces (e.g. 'AdamValerie')
+                creates a separate worksheet tab automatically
+──────────────────────────────────────────────────── */
+var SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
+var COUPLE_KEY = 'AdamValerie';
 
 (function () {
   var currentStep = 1;
@@ -387,11 +392,15 @@ var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxj-XFtLSke7nW6JwVEUJI
 
     // Submit to Google Apps Script if URL is configured
     if (SCRIPT_URL && SCRIPT_URL !== 'YOUR_APPS_SCRIPT_URL_HERE') {
+      // guestUrl = the ?to= param so you know which invite link was used
+      var guestUrl = new URLSearchParams(window.location.search).get('to') || '';
       var params = new URLSearchParams({
+        couple:     COUPLE_KEY,
         name:       name,
         attendance: attendance,
         guests:     guests,
-        wishes:     wishes
+        wishes:     wishes,
+        guestUrl:   guestUrl
       });
       fetch(SCRIPT_URL + '?' + params.toString(), { method: 'GET', mode: 'no-cors' })
         .catch(function () {}); // silent fail — form still advances
